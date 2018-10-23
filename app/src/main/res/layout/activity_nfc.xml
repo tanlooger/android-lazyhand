@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".view.NfcActivity">
+
+
+
+    <TextView
+        android:id="@+id/nfc_deviceid_label"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+        android:text="设备ID"
+        android:gravity="center_vertical|end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nfc_deviceid"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical"
+        android:text="设备"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nfc_deviceid_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nfc_ssid_label"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+        android:text="WIFI SSID"
+        android:gravity="center_vertical|end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nfc_deviceid_label" />
+
+    <TextView
+        android:id="@+id/nfc_ssid"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center_vertical"
+        android:text="没有连接任何WIFI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/nfc_ssid_label"
+        app:layout_constraintTop_toBottomOf="@+id/nfc_deviceid" />
+
+    <TextView
+        android:id="@+id/nfc_password_label"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:text="WIFI密码"
+        android:gravity="center_vertical|end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nfc_ssid_label" />
+
+    <EditText
+        android:id="@+id/nfc_password"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:hint="WIFI密码为空"
+        android:inputType="textVisiblePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nfc_password_label"
+        app:layout_constraintTop_toBottomOf="@+id/nfc_ssid" />
+
+    <Button
+        android:id="@+id/nfc_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+        android:enabled="false"
+        android:onClick="onSave"
+        android:text="保存WIFI信息到设备"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nfc_password" />
+
+    <Button
+        android:id="@+id/nfc_switch"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/gray_circle"
+        android:onClick="onSwitchClick"
+        android:tag="off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

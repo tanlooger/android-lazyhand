@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">lazyhand</string>
+    <string name="navigation_used">常用</string>
+    <string name="navigation_devices">设备</string>
+    <string name="navigation_fee">电费</string>
+    <string name="navigation_me">我</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+</resources>
